@@ -32,6 +32,10 @@ app.set('view engine', 'html');
 // --
 
 app.use("/", require('./controllers/homepage'));
+app.use("/", require('./controllers/about'));
+app.use("/", require('./controllers/contact'));
+// Page contact     localhost:3000/contact
+// Page about       localhost:3000/qui-sommes-nous
 
 
 
