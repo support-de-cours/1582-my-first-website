@@ -15,7 +15,11 @@ const path = "/contact";
 // Definition du controller de la page
 const controller = (request, response) => {
 
-    response.render('contact', {});
+    response.render('contact', {
+        pageId: "contact",
+        pageTitle: "Contactez moi"
+    });
+
 };
 
 // Ajout de la definition de la page au registre de routage de Express

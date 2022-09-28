@@ -21,6 +21,8 @@ const controller = (request, response) => {
 
     // response.render('nom de la vue', objet de données a transmerttre à la vue );
     response.render('homepage', {
+        pageId: "homepage",
+        pageTitle: "Mon super Site",
         username: var_username,
         fruits: fruits
     });

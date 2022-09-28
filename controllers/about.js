@@ -15,7 +15,10 @@ const path = "/qui-sommes-nous";
 // Definition du controller de la page
 const controller = (request, response) => {
 
-    response.render('about', {});
+    response.render('about', {
+        pageId: "about",
+        pageTitle: "Qui sommes nous ?"
+    });
 
 };
 

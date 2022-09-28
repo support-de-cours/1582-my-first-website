@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= pageTitle %></title>
 
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/main.css">
@@ -16,10 +16,10 @@
         <div class="container">
 
             <nav>
-                <a href="/">Home</a>
-                <a href="/contact" class="active">Contact</a>
-                <a href="/qui-sommes-nous">Qui Sommes Nous</a>
-                <a href="/books">Nos livres</a>
+                <a <% if (pageId === 'homepage') { %>class="active" <% } %> href="/">Home</a>
+                <a <% if (pageId === 'contact') {%>class="active" <% } %> href="/contact">Contact</a>
+                <a <% if (pageId === 'about') {%>class="active" <% } %> href="/qui-sommes-nous">Qui Sommes Nous</a>
+                <a <% if (pageId === 'book') {%>class="active" <% } %> href="/books">Nos livres</a>
             </nav>
 
         </div>

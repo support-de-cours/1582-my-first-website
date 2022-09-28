@@ -43,6 +43,8 @@ app.use(require('./controllers/contact'));
 app.use(function(req, res){
     res.status(404);
     res.render('404', { 
+        pageTitle: "404 Not Found",
+        pageId: "err404",
         host: req.hostname,
         url: req.url 
     })
