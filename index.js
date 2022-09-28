@@ -27,6 +27,9 @@ app.set('views', path.join(__dirname, "views"));
 // Utilisation du moteur de rendu HTML
 app.set('view engine', 'html');
 
+// Ajoute l'accès au répertoire "public"
+app.use( express.static( path.join(__dirname, "public") ) );
+
 
 
 // Routing
