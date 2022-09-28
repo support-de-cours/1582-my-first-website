@@ -1,5 +1,8 @@
 "use strict";
 
+
+console.log("Je suis un log du fichier ", __filename);
+
 const ejs = require('ejs');
 const path = require('path');
 
