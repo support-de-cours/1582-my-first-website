@@ -24,7 +24,6 @@ const controller = (request, response) => {
         username: var_username,
         fruits: fruits
     });
-
 };
 
 // Ajout de la definition de la page au registre de routage de Express

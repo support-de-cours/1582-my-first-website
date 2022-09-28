@@ -16,7 +16,6 @@ const path = "/contact";
 const controller = (request, response) => {
 
     response.render('contact', {});
-
 };
 
 // Ajout de la definition de la page au registre de routage de Express

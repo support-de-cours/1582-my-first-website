@@ -24,6 +24,7 @@ app.engine('.html', ejs.__express);
 app.set('views', path.join(__dirname, "views"));
 
 
+// Utilisation du moteur de rendu HTML
 app.set('view engine', 'html');
 
 
@@ -31,11 +32,19 @@ app.set('view engine', 'html');
 // Routing
 // --
 
-app.use("/", require('./controllers/homepage'));
-app.use("/", require('./controllers/about'));
-app.use("/", require('./controllers/contact'));
-// Page contact     localhost:3000/contact
-// Page about       localhost:3000/qui-sommes-nous
+app.use(require('./controllers/homepage'));
+app.use(require('./controllers/about'));
+app.use(require('./controllers/contact'));
+
+// Création de la page 404
+app.use(function(req, res){
+    res.status(404);
+    res.render('404', { 
+        host: req.hostname,
+        url: req.url 
+    })
+});
+
 
 
 
@@ -45,4 +54,3 @@ app.use("/", require('./controllers/contact'));
 app.listen(port , () => {
     console.log("App listening on port", port);
 });
-
