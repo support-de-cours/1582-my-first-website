@@ -1,0 +1,11 @@
+
+Execute du code JavaScript
+<% // code ejs %>
+
+
+Affiche le contenu de la variable
+<%= variable %>
+
+
+Inclusion de portion de code EJS
+<%- include -%>
